@@ -17,24 +17,8 @@ export class Currency {
    * The only instance of the base class `Currency`.
    */
 
-  public static readonly ETHER = {
-    [ChainId.MUMBAI]: new Currency(18, 'MATIC', 'Matic'),
-    [ChainId.MATIC]: new Currency(18, 'POL', 'Polygon Ecosystem Token'),
-    [ChainId.DOEGCHAIN_TESTNET]: new Currency(18, 'WDOGE', 'Wrapped Doge'),
-    [ChainId.DOGECHAIN]: new Currency(18, 'WDOGE', 'Wrapped Doge'),
-    [ChainId.ZKTESTNET]: new Currency(18, 'ETH', 'Ether'),
-    [ChainId.ZKEVM]: new Currency(18, 'ETH', 'Ether'),
-    [ChainId.KAVA]: new Currency(18, 'KAVA', 'KAVA'),
-    [ChainId.MANTA]: new Currency(18, 'ETH', 'Ether'),
-    [ChainId.ZKATANA]: new Currency(18, 'ETH', 'Ether'),
-    [ChainId.BTTC]: new Currency(18, 'BTT', 'Bit Torrent'),
-    [ChainId.X1]: new Currency(18, 'OKB', 'OKB'),
-    [ChainId.TIMX]: new Currency(18, 'IMX', 'IMX'),
-    [ChainId.IMX]: new Currency(18, 'IMX', 'IMX'),
-    [ChainId.ASTARZKEVM]: new Currency(18, 'ETH', 'Ether'),
-    [ChainId.LAYERX]: new Currency(18, 'OKB', 'OKB'),
-    [ChainId.ETHEREUM]: new Currency(18, 'ETH', 'Ether'),
-    [ChainId.MINATO]: new Currency(18, 'ETH', 'Ether'),
+  public static readonly XRP = {
+    [ChainId.XRPL_EVM_SIDECHAIN]: new Currency(18, 'XRP', 'XRP')
   }
 
   /**
@@ -52,5 +36,5 @@ export class Currency {
   }
 }
 
-const ETHER = Currency.ETHER
-export { ETHER }
+const XRP = Currency.XRP
+export { XRP }

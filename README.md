@@ -1,4 +1,4 @@
-# QuickSwap SDK
+# marsgate SDK
 
 This repository has been forked from [UniswapV2](https://github.com/Uniswap/uniswap-sdk)
 
@@ -9,13 +9,13 @@ To run the tests, follow these steps. You must have at least node v10 and [yarn]
 First clone the repository:
 
 ```sh
-git clone https://github.com/QuickSwap/QuickSwap-sdk.git
+git clone https://github.com/marsgate/marsgate-sdk.git
 ```
 
-Move into the quickswap-sdk working directory
+Move into the marsgate-sdk working directory
 
 ```sh
-cd QuickSwap-sdk/
+cd marsgate-sdk/
 ```
 
 Install dependencies

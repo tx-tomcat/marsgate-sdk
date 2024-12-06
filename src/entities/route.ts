@@ -1,8 +1,8 @@
 import { ChainId } from '../constants'
 import invariant from 'tiny-invariant'
 
-import { Currency, ETHER } from './currency'
-import { Token, WETH } from './token'
+import { Currency, XRP } from './currency'
+import { Token, WXRP } from './token'
 import { Pair } from './pair'
 import { Price } from './fractions/price'
 
@@ -21,17 +21,17 @@ export class Route {
     )
     invariant(
       (input instanceof Token && pairs[0].involvesToken(input)) ||
-        (input === ETHER[pairs[0].chainId] && pairs[0].involvesToken(WETH[pairs[0].chainId])),
+        (input === XRP[pairs[0].chainId] && pairs[0].involvesToken(WXRP[pairs[0].chainId])),
       'INPUT'
     )
     invariant(
       typeof output === 'undefined' ||
         (output instanceof Token && pairs[pairs.length - 1].involvesToken(output)) ||
-        (output === ETHER[pairs[0].chainId] && pairs[pairs.length - 1].involvesToken(WETH[pairs[0].chainId])),
+        (output === XRP[pairs[0].chainId] && pairs[pairs.length - 1].involvesToken(WXRP[pairs[0].chainId])),
       'OUTPUT'
     )
 
-    const path: Token[] = [input instanceof Token ? input : WETH[pairs[0].chainId]]
+    const path: Token[] = [input instanceof Token ? input : WXRP[pairs[0].chainId]]
     for (const [i, pair] of pairs.entries()) {
       const currentInput = path[i]
       invariant(currentInput.equals(pair.token0) || currentInput.equals(pair.token1), 'PATH')

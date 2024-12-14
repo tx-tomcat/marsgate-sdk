@@ -18,7 +18,9 @@ export class Currency {
    */
 
   public static readonly XRP = {
-    [ChainId.XRPL_EVM_SIDECHAIN]: new Currency(18, 'XRP', 'XRP')
+    [ChainId.XRPL_EVM_SIDECHAIN_DEVNET]: new Currency(18, 'XRP', 'XRP'),
+    [ChainId.ROOT_NETWORK_TESTNET]: new Currency(18, 'XRP', 'XRP'),
+    [ChainId.ROOT_NETWORK_MAINNET]: new Currency(18, 'XRP', 'XRP')
   }
 
   /**

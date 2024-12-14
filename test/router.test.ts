@@ -10,13 +10,13 @@ function checkDeadline(deadline: string[] | string): void {
 }
 
 describe('Router', () => {
-  const token0 = new Token(ChainId.XRPL_EVM_SIDECHAIN, '0x0000000000000000000000000000000000000001', 18, 't0')
-  const token1 = new Token(ChainId.XRPL_EVM_SIDECHAIN, '0x0000000000000000000000000000000000000002', 18, 't1')
+  const token0 = new Token(ChainId.XRPL_EVM_SIDECHAIN_DEVNET, '0x0000000000000000000000000000000000000001', 18, 't0')
+  const token1 = new Token(ChainId.XRPL_EVM_SIDECHAIN_DEVNET, '0x0000000000000000000000000000000000000002', 18, 't1')
 
   const pair_0_1 = new Pair(new TokenAmount(token0, JSBI.BigInt(1000)), new TokenAmount(token1, JSBI.BigInt(1000)))
 
   const pair_weth_0 = new Pair(
-    new TokenAmount(WXRP[ChainId.XRPL_EVM_SIDECHAIN], '1000'),
+    new TokenAmount(WXRP[ChainId.XRPL_EVM_SIDECHAIN_DEVNET], '1000'),
     new TokenAmount(token0, '1000')
   )
 
@@ -30,7 +30,7 @@ describe('Router', () => {
         expect(result.methodName).toEqual('swapExactETHForTokens')
         expect(result.args.slice(0, -1)).toEqual([
           '0x51',
-          [WXRP[ChainId.XRPL_EVM_SIDECHAIN].address, token0.address, token1.address],
+          [WXRP[ChainId.XRPL_EVM_SIDECHAIN_DEVNET].address, token0.address, token1.address],
           '0x0000000000000000000000000000000000000004'
         ])
         expect(result.value).toEqual('0x64')
@@ -45,7 +45,7 @@ describe('Router', () => {
         expect(result.args.slice(0, -1)).toEqual([
           '0x64',
           '0x51',
-          [token1.address, token0.address, WXRP[ChainId.XRPL_EVM_SIDECHAIN].address],
+          [token1.address, token0.address, WXRP[ChainId.XRPL_EVM_SIDECHAIN_DEVNET].address],
           '0x0000000000000000000000000000000000000004'
         ])
         expect(result.value).toEqual('0x0')
@@ -76,7 +76,7 @@ describe('Router', () => {
         expect(result.methodName).toEqual('swapETHForExactTokens')
         expect(result.args.slice(0, -1)).toEqual([
           '0x64',
-          [WXRP[ChainId.XRPL_EVM_SIDECHAIN].address, token0.address, token1.address],
+          [WXRP[ChainId.XRPL_EVM_SIDECHAIN_DEVNET].address, token0.address, token1.address],
           '0x0000000000000000000000000000000000000004'
         ])
         expect(result.value).toEqual('0x80')
@@ -91,7 +91,7 @@ describe('Router', () => {
         expect(result.args.slice(0, -1)).toEqual([
           '0x64',
           '0x80',
-          [token1.address, token0.address, WXRP[ChainId.XRPL_EVM_SIDECHAIN].address],
+          [token1.address, token0.address, WXRP[ChainId.XRPL_EVM_SIDECHAIN_DEVNET].address],
           '0x0000000000000000000000000000000000000004'
         ])
         expect(result.value).toEqual('0x0')
@@ -128,7 +128,7 @@ describe('Router', () => {
           expect(result.methodName).toEqual('swapExactETHForTokensSupportingFeeOnTransferTokens')
           expect(result.args.slice(0, -1)).toEqual([
             '0x51',
-            [WXRP[ChainId.XRPL_EVM_SIDECHAIN].address, token0.address, token1.address],
+            [WXRP[ChainId.XRPL_EVM_SIDECHAIN_DEVNET].address, token0.address, token1.address],
             '0x0000000000000000000000000000000000000004'
           ])
           expect(result.value).toEqual('0x64')
@@ -148,7 +148,7 @@ describe('Router', () => {
           expect(result.args.slice(0, -1)).toEqual([
             '0x64',
             '0x51',
-            [token1.address, token0.address, WXRP[ChainId.XRPL_EVM_SIDECHAIN].address],
+            [token1.address, token0.address, WXRP[ChainId.XRPL_EVM_SIDECHAIN_DEVNET].address],
             '0x0000000000000000000000000000000000000004'
           ])
           expect(result.value).toEqual('0x0')

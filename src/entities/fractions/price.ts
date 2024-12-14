@@ -65,7 +65,7 @@ export class Price extends Fraction {
     }
     return CurrencyAmount.ether(
       super.multiply(currencyAmount.raw).quotient,
-      ChainId.XRPL_EVM_SIDECHAIN
+      ChainId.XRPL_EVM_SIDECHAIN_DEVNET
       /**Need to change this later
        */
     )

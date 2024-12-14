@@ -57,8 +57,22 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
 }
 
 export const WXRP = {
-  [ChainId.XRPL_EVM_SIDECHAIN]: new Token(
-    ChainId.XRPL_EVM_SIDECHAIN,
+  [ChainId.XRPL_EVM_SIDECHAIN_DEVNET]: new Token(
+    ChainId.XRPL_EVM_SIDECHAIN_DEVNET,
+    '0x8049c9E3cE496b47E0fE8aa8EdAEf751cF87e07d',
+    18,
+    'WXRP',
+    'Wrapped XRP'
+  ),
+  [ChainId.ROOT_NETWORK_TESTNET]: new Token(
+    ChainId.ROOT_NETWORK_TESTNET,
+    '0x8049c9E3cE496b47E0fE8aa8EdAEf751cF87e07d',
+    18,
+    'WXRP',
+    'Wrapped XRP'
+  ),
+  [ChainId.ROOT_NETWORK_MAINNET]: new Token(
+    ChainId.ROOT_NETWORK_MAINNET,
     '0x8049c9E3cE496b47E0fE8aa8EdAEf751cF87e07d',
     18,
     'WXRP',

@@ -18,7 +18,7 @@ export class CurrencyAmount extends Fraction {
    * Helper that calls the constructor with the ETHER currency
    * @param amount ether amount in wei
    */
-  public static ether(amount: BigintIsh, chainId: ChainId = ChainId.XRPL_EVM_SIDECHAIN): CurrencyAmount {
+  public static ether(amount: BigintIsh, chainId: ChainId = ChainId.XRPL_EVM_SIDECHAIN_DEVNET): CurrencyAmount {
     return new CurrencyAmount(XRP[chainId], amount)
   }
 
